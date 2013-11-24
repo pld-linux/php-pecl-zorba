@@ -5,7 +5,7 @@ Summary:	%{modname} - PHP support for XQuery
 Summary(pl.UTF-8):	%{modname} - wsparcie PHP dla XQuery
 Name:		%{php_name}-pecl-%{modname}
 Version:	0.9.9
-Release:	1
+Release:	2
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -15,7 +15,8 @@ BuildRequires:	%{php_name}-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.650
 BuildRequires:	zorba-devel
 %{?requires_php_extension}
-Requires:	php-common >= 4:5.0.4
+Requires:	php(core) >= 5.0.4
+Provides:	php(%{modname}) = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
